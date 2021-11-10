@@ -39,8 +39,8 @@ dependencies {
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 }
 def siteUrl = 'https://github.com/FinalTeam/RxGalleryFinal'
-def gitUrl = 'https://github.com/FinalTeam/RxGalleryFinal.git'
-group = "cn.finalteam.rxgalleryfinal"
+def gitUrl = 'https://github.com/wooodypan/RxGalleryFinal.git'
+group = "cn.wooodypan.rxgalleryfinal"
 install {
     repositories.mavenInstaller {
         pom {

@@ -63,8 +63,8 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.BucketView
         BucketBean bucketBean = mBucketList.get(position);
         String bucketName = bucketBean.getBucketName();
         if (position != 0) {
-            if (!bucketName == null) {
-                holder.mTvBucketName.setText(nameSpannable);
+            if (bucketName == null) {
+                holder.mTvBucketName.setText("");
             }
             else {
             SpannableString nameSpannable = new SpannableString(bucketName + "\n" + bucketBean.getImageCount() + "张");
