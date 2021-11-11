@@ -60,10 +60,15 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.BucketView
         BucketBean bucketBean = mBucketList.get(position);
         String bucketName = bucketBean.getBucketName();
         if (position != 0) {
+            if (bucketName == null) {
+                holder.mTvBucketName.setText("");
+            }
+            else {
             SpannableString nameSpannable = new SpannableString(bucketName + "\n" + bucketBean.getImageCount() + "张");
             nameSpannable.setSpan(new ForegroundColorSpan(Color.GRAY), bucketName.length(), nameSpannable.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             nameSpannable.setSpan(new RelativeSizeSpan(0.8f), bucketName.length(), nameSpannable.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             holder.mTvBucketName.setText(nameSpannable);
+            }
         } else {
             holder.mTvBucketName.setText(bucketName);
         }
